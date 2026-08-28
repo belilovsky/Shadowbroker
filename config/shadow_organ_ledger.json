@@ -1,6 +1,6 @@
 {
   "schema_version": "shadowbroker-organ-ledger/v1",
-  "generated_at": "2026-08-28T13:30:34Z",
+  "generated_at": "2026-08-28T16:37:19Z",
   "donor": {
     "project_id": "shadowbroker",
     "revision": "79aff792c4b2780fe7982c297d95190b87f09c5c",
@@ -628,7 +628,7 @@
     "blockers": [
       "QazLake production feed has not yet completed deployment and live security proof.",
       "QazPipe schedules remain intentionally inactive pending source gates and canaries.",
-      "The broad upstream PR 543 was closed without merge; narrow opt-in compare PR 544 is open and has not yet been accepted upstream.",
+      "The broad upstream PR 543 was closed without merge; narrow opt-in compare PR 544 now contains source-family cutover and mesh-rotation hardening at 79f313fc4e5fb901257d0318aec1bd0138359a25 but has not yet been accepted upstream.",
       "Protected exact runtime, embedded schedule and credential-binding inventory is captured outside Git; schedule shutdown and credential revocation evidence are not complete.",
       "Three successful comparisons, one scheduled window, 24-hour observation and one full cadence are not yet evidenced."
     ],
