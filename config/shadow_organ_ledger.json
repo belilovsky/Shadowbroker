@@ -322,7 +322,7 @@
       "disposition": "migrate",
       "status": "partial_manual_canary_passed_schedule_and_feed_pending",
       "implementation_evidence": {
-        "qazpipe_commit": "b6dacd897121d471d48ffb1066ca1552ee1ba977",
+        "qazpipe_commit": "bfde70d6d8f682d47dc25bfd072d1debde9466af",
         "qazpipe_pr": "https://github.com/belilovsky/qazpipe/pull/75",
         "qazlake_commit": "6149e7093ffd6cd7942815f4966a8d455d9bb13b",
         "qazlake_pr": "https://github.com/belilovsky/qazlake/pull/50",
