@@ -158,7 +158,7 @@
       {"pattern": "backend/data/kiwisdr_directory.json", "organ_id": "data.public-orbital-radio", "decision": "do_not_migrate_reacquire_primary_after_gate", "reason": "The bundled fallback came from an unofficial mirror and lacks version, rights and coordinate-precision receipts."},
       {"pattern": "backend/data/military_bases.json", "organ_id": "data.public-risk-sanctions-supply-chain", "decision": "record_hash_then_delete_bundle", "reason": "The hand-curated precise-location bundle has no source or reuse provenance and must not be exported."},
       {"pattern": "backend/data/plan_ccg_vessels.json", "organ_id": "data.public-risk-sanctions-supply-chain", "decision": "record_hash_then_delete_bundle", "reason": "The embedded watchlist has no acceptable source provenance and must not be collected or exported."},
-      {"pattern": "backend/data/plane_alert_db.json", "organ_id": "data.public-flight-observations", "decision": "do_not_migrate_reacquire_primary_after_odbl_and_personal_data_gate", "reason": "The generated donor snapshot lacks an upstream-version receipt; any successor must reacquire the ODbL source and exclude personal targeting fields."},
+      {"pattern": "backend/data/plane_alert_db.json", "organ_id": "data.public-flight-observations", "decision": "do_not_migrate_reject_personal_targeting_source", "reason": "The generated donor snapshot lacks an upstream-version receipt, and the current primary centers famous-person, VIP, political and other personal-targeting categories. No successor collector or schedule is created; neutral positions remain covered by ADSB.lol."},
       {"pattern": "backend/data/power_plants.json", "organ_id": "data.public-reference-geo-infrastructure", "decision": "do_not_migrate_reacquire_wri_v1_3_0", "reason": "Reacquire WRI Global Power Plant Database v1.3.0 from the primary CC BY 4.0 source with attribution, version and payload hash."},
       {"pattern": "backend/data/release_digests.json", "organ_id": "platform.runtime-security-observability", "decision": "archive_final_release_evidence_then_retire", "reason": "Release digests are Shadow integrity evidence, not a reusable dataset."},
       {"pattern": "backend/data/tor_bundle_digests.json", "organ_id": "security.hmac-replay-ssrf", "decision": "archive_final_integrity_evidence_then_retire", "reason": "Tor bundle digests retire with the Shadow transport after final integrity evidence is recorded."},
@@ -320,7 +320,21 @@
       "capability": "Public infrastructure, route, rail, fleet and radio-mesh reference datasets.",
       "target_owner": "qazpipe-qazlake",
       "disposition": "migrate",
-      "status": "blocked_pending_dataset_review",
+      "status": "partial_manual_canary_passed_schedule_and_feed_pending",
+      "implementation_evidence": {
+        "qazpipe_commit": "aea29a299bb5183a680c9f22a11dafd17ca2bfdc",
+        "qazpipe_pr": "https://github.com/belilovsky/qazpipe/pull/75",
+        "qazlake_commit": "0d4d0471d78897756c3975f0a23f60d55ebc33b7",
+        "qazlake_pr": "https://github.com/belilovsky/qazlake/pull/50",
+        "wri_manual_canaries": 3,
+        "wri_unique_per_run": 34936,
+        "datacenter_manual_canaries": 3,
+        "datacenter_unique_per_run": 6115,
+        "datacenter_duplicates_per_run": 16,
+        "schema_rejections": 0,
+        "published": false,
+        "schedule_active": false
+      },
       "acceptance": ["dataset versions and licenses are pinned", "reference refresh cadence is declared", "public projection removes topology-sensitive fields"]
     },
     {
