@@ -43,6 +43,31 @@ not become new platform modules. Only redacted contracts and synthetic golden
 fixtures may be archived; anything without an approved successor retires with
 Shadow.
 
+## Bundled data disposition
+
+Tracked files under `backend/data` are donor artifacts, not migration inputs.
+Each tracked data file has an exact first-match decision in the organ ledger:
+
+- Reacquire WRI Global Power Plant Database v1.3.0 from its primary CC BY 4.0
+  source with version, attribution and payload hash. Do not copy the donor JSON.
+- Reacquire the current Global Data Center Map only under its current
+  attribution terms. Do not copy the older donor snapshot; preserve whether a
+  coordinate is a facility location or a city, region or country centroid.
+- Reacquire Plane Alert from the primary ODbL/DBCL source only after
+  share-alike, attribution, retention and personal-data projection review.
+  Exclude VIP names, social accounts and other personal-targeting fields.
+- Do not migrate the bundled KiwiSDR mirror, military-base list, carrier seed,
+  PLAN/yacht watchlists or tracked-names bundle. Record only non-secret hashes
+  and provenance gaps, then delete them through the signed retirement receipt.
+- Archive the DrishX notice and binary hash, but retire the model binary because
+  its exact upstream version, training lineage and reproducible receipt are
+  absent. Archive final release and transport digest evidence, not their runtime.
+
+Ignored runtime state is inventoried separately on the source host. It may
+contain credentials, private policies, peer topology, secure-storage material,
+caches and outboxes, so it is neither committed nor copied. It is removed only
+by the signed exact-resource retirement sequence after credential revocation.
+
 ## Retirement sequence
 
 1. Finish QazLake feed deployment and security proof, then QazPipe inactive
