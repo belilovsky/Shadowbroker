@@ -37,7 +37,7 @@
       "canonical_owner": "qazstack.analytics-and-qazcompute",
       "owner_baseline": "081de3852ce0becbbc408272fcaa925fc4cf4117",
       "decision": "reuse_existing_and_keep_product_workload_outside_shared_core",
-      "reason": "QazStack already owns early-warning, drift, graph, scenario and calibration contracts; Shadow weights, cases, region heuristics and operator actions are product policy rather than a shared primitive."
+      "reason": "A semantic audit of Shadow's Wilson intervals, threshold tuning, weekly delayed-label backtests, three-day ignition comparison, GT Bayesian weights and graph contagion found no missing provider-neutral primitive. QazStack already owns early-warning, drift, graph, scenario, calibration and evaluation contracts; Shadow weights, cases, region heuristics and operator actions are product policy. Only redacted golden cases and result-shape fixtures belong in the retirement archive."
     },
     {
       "family": "temporal-snapshots-and-diffs",
@@ -57,8 +57,9 @@
       "family": "operational-map-and-source-state-ui",
       "canonical_owner": "avds",
       "owner_baseline": "avds-4.8.0-eb719b0",
+      "audited_against_revision": "239154d0b2ee1de0a7d222381ef9f0b1d5a6075f",
       "decision": "reuse_existing_and_defer_unproven_gaps",
-      "reason": "AVDS already provides freshness, source policy and health, operational evidence, release proof and map layer controls. The Shadow rail, sheet and timeline remain candidates only after a second consumer and exact catalog gap."
+      "reason": "The current AVDS catalog already provides DataFreshness, SourcePolicyBadge, OperationalEvidence, ReleaseProof, StatePanel, Toast, Sheet, Dialog, LiveLinkReleaseGate, MediaMonitoringSurface, timeline adapters and QazGeoMapCanvas. Shadow's status rail, alerts, dialogs, map shell and media panels therefore adapt to AVDS or retire. Its interactive time scrubber and layer-control composition remain unproven candidates until an exact catalog gap and second consumer exist; no parallel AVDS primitive is extracted."
     }
   ],
   "module_inventory": {
@@ -595,7 +596,7 @@
     "blockers": [
       "QazLake production feed has not yet completed deployment and live security proof.",
       "QazPipe schedules remain intentionally inactive pending source gates and canaries.",
-      "Shadow upstream PR 543 is not merged and upstream push permission is unavailable.",
+      "The broad upstream PR 543 was closed without merge; narrow opt-in compare PR 544 is open and has not yet been accepted upstream.",
       "Protected exact runtime, embedded schedule and credential-binding inventory is captured outside Git; schedule shutdown and credential revocation evidence are not complete.",
       "Three successful comparisons, one scheduled window, 24-hour observation and one full cadence are not yet evidenced."
     ],
